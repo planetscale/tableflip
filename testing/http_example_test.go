@@ -13,8 +13,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/cloudflare/tableflip"
-	"github.com/cloudflare/tableflip/testing"
+	"github.com/planetscale/tableflip"
+	"github.com/planetscale/tableflip/testing"
 )
 
 type upgrader interface {

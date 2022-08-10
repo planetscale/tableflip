@@ -11,7 +11,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/cloudflare/tableflip"
+	"github.com/planetscale/tableflip"
 )
 
 // This shows how to use the upgrader

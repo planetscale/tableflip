@@ -7,7 +7,7 @@ package testing
 import (
 	"context"
 
-	"github.com/cloudflare/tableflip"
+	"github.com/planetscale/tableflip"
 )
 
 // Upgrader has all the methods of tableflip.Upgrader, but they don't

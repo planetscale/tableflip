@@ -27,6 +27,8 @@ type Options struct {
 	PIDFile string
 	// ListenConfig is a custom ListenConfig. Defaults to an empty ListenConfig
 	ListenConfig *net.ListenConfig
+	// IgnoreParentExit allows multiple upgrades to occur in parallel.
+	IgnoreParentExit bool
 }
 
 // Upgrader handles zero downtime upgrades and passing files between processes.
@@ -224,7 +226,7 @@ func (u *Upgrader) run() {
 				continue
 			}
 
-			if parentExited != nil {
+			if !u.opts.IgnoreParentExit && parentExited != nil {
 				request <- errors.New("parent hasn't exited")
 				continue
 			}

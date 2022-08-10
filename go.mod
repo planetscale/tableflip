@@ -1,4 +1,4 @@
-module github.com/cloudflare/tableflip
+module github.com/planetscale/tableflip
 
 go 1.14
 
